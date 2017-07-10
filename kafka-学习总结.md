@@ -4,9 +4,9 @@ tags: kafka
 grammar_cjkRuby: true
 ---
 
-## kafka学习总结
+**kafka学习总结**
 
-[top]
+[toc]
 
 ### 第一章
 
