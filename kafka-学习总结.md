@@ -59,9 +59,7 @@ Kafka是一种分布式的，基于发布/订阅的消息系统。主要设计�
 
 ### 第三章 原理
 #### 3.1 架构图
-
-   :> ![kafka原理图][1] <-
-
+  ![kafka 原理图][1]
 - topic：消息存放的目录即主题
 - Producer：生产消息到topic的一方
 - Consumer：订阅topic消费消息的一方
@@ -78,7 +76,7 @@ Kafka是一种分布式的，基于发布/订阅的消息系统。主要设计�
 [消息队列设计的精髓][4]
 
 
-  [1]: ./images/producer_consumer.png "producer_consumer"
+  [1]: ./images/kafka%20%E5%8E%9F%E7%90%86%E5%9B%BE.jpg "kafka 原理图"
   [2]: http://blog.csdn.net/shaobingj126/article/details/50585035
   [3]: http://blog.csdn.net/allthesametome/article/details/47362451
   [4]: http://www.dataguru.cn/article-9582-1.html
