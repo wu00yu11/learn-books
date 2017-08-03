@@ -115,3 +115,46 @@ fi
 
 echo "SUCCESS"
 ```
+
+###  deliver_ssh_key.yml
+```yaml
+- hosts: app
+
+tasks:
+	- name:deliver authorized_keys
+	  authorized_key:
+	  		user: nucc
+			key: "{{lookup('file','/home/test/.ssh/id_rsa.pub')}}"
+			state: present
+			exclusive: no
+
+```
+
+### start.yml
+```yaml
+- hosts: app
+   
+   tasks:
+   		- name: 启动jetty容器
+   		  shell:  nohub /tools/jetty/bin/jetty.sh start
+```
+
+### stop.yml
+```yaml
+- hosts: app
+   
+   tasks:
+   		- name: 停止jetty容器
+   		  shell:  nohub /tools/jetty/bin/jetty.sh stop
+```
+
+### restart.yml
+```yaml
+- hosts: app
+   
+   tasks:
+    	- name: 停止jetty容器
+   		  shell:  nohub /tools/jetty/bin/jetty.sh stop
+   		- name: 启动jetty容器
+   		  shell:  nohub /tools/jetty/bin/jetty.sh start
+```
